@@ -1,5 +1,5 @@
 .modal {
-    display: none; /* Escondido por padrão */
+    display: none;
     position: fixed;
     z-index: 1;
     left: 0;
@@ -7,7 +7,7 @@
     width: 100vw;
     height: 100vh;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.6); /* fundo escurecido */
+    background-color: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
 }
@@ -19,29 +19,53 @@
 .modal-content {
     background-color: #FFF;
     border-radius: 16px;
-    padding: 30px;
-    max-width: 400px;
+    /* padding: 30px; */
+    max-width: 320px;
+    max-height: 800px;
     width: 90%;
     position: relative;
 }
 
-#modalPokemonCard .pokemon {
+#modalPokemonCard .pokemon-modal {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    
+    /* padding: 1rem; */
+    border-radius: 1rem;
+}
+
+#modalPokemonCard .header-info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#modalPokemonCard .name-types {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 #modalPokemonCard .name {
     font-size: 1.5rem;
     font-weight: bold;
     text-transform: capitalize;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #FFF;
 }
 
 #modalPokemonCard .number {
     font-weight: bold;
+    font-size: 1.1rem;
     margin-bottom: 5px;
+    color: #FFF;
 }
 
 #modalPokemonCard .types {
@@ -61,8 +85,42 @@
     font-size: 0.9rem;
 }
 
-/* Imagem do Pokémon */
 #modalPokemonCard img {
     width: 120px;
     height: 120px;
+}
+
+#modalPokemonCard .modal-bottom {
+    background-color: #FFF;
+    position: relative;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+#modalPokemonCard .info {
+    font-size: 0.95rem;
+    color: #444;
+    text-align: left;
+    width: 100%;
+}
+
+#modalPokemonCard .info p {
+    margin: 6px 0;
+}
+
+#modalPokemonCard .ability {
+    margin: 0 3px;
+    display: inline-block;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+#modalPokemonCard .close-button {
+    color: #FFF;
+    font-size: 2rem;
+    align-self: flex-start;
+    padding-left: 10px;
 }

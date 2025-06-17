@@ -1,0 +1,67 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #FFF;
+    border-radius: 16px;
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+}
+
+#modalPokemonCard .pokemon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#modalPokemonCard .name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+#modalPokemonCard .number {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#modalPokemonCard .types {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+#modalPokemonCard .type {
+    padding: 4px 10px;
+    border-radius: 12px;
+    background-color: #eee;
+    text-transform: capitalize;
+    font-size: 0.9rem;
+}
+
+#modalPokemonCard img {
+    width: 120px;
+    height: 120px;
+}

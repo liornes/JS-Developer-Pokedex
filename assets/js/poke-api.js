@@ -13,6 +13,11 @@ function convertPokemonDetailToPokemon(pokeDetail) {
     
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default;
 
+    pokemon.height = pokeDetail.height / 10;
+    pokemon.weight = pokeDetail.weight / 10;
+
+    pokemon.abilities = pokeDetail.abilities.map(a => a.ability.name);
+
     return pokemon;
 }
 
